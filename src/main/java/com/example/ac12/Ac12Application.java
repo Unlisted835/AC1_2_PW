@@ -32,7 +32,7 @@ public class Ac12Application {
          diretorRepository.findByNomeStartingWith("J").forEach(System.out::println);
 
          System.out.println("\n\n=== Diretores com id 1 e seus filmes ===");
-         diretorRepository.findByIdWithFilmes(1).forEach(System.out::println);
+         diretorRepository.findByIdWithFilmes(1).ifPresent(System.out::println);
 
          System.out.println("\n\n=== Filmes com duração maior que 120 minutos ===");
          filmeRepository.findByDuracaoGreaterThan(120).forEach(System.out::println);

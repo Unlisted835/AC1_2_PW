@@ -30,7 +30,7 @@ public class Diretor {
    public String nome;
 
    @OneToMany(mappedBy = "diretor", fetch = FetchType.LAZY)
-   public Collection<Filme> filmes;
+   public List<Filme> filmes;
 
    public Diretor(String nome) {
       this.nome = nome;
